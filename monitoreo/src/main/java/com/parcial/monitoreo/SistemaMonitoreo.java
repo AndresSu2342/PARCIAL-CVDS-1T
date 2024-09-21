@@ -13,7 +13,8 @@ import java.util.List;
 import java.util.Map;
 
 @SpringBootApplication
-public class SistemaMonitorio {
-
-
+public class SistemaMonitoreo {
+	public static void main(String[] args) {
+		SpringApplication.run(SistemaMonitoreo.class, args);
+	}
 }
