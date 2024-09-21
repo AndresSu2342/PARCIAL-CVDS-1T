@@ -2,8 +2,9 @@ package com.parcial.monitoreo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Service;
 
-import com.parcial.monitoreo.producto.Producto;
+import com.parcial.monitoreo.producto.*;
 import com.parcial.monitoreo.log.Log;
 import com.parcial.monitoreo.advertencia.Advertencia;
 
@@ -13,13 +14,14 @@ import java.util.List;
 import java.util.Map;
 
 @SpringBootApplication
-public class SistemaMonitoreo {
+@Service
+public class ProductoService {
 
 	private final Map<String, Producto> productos = new HashMap<>();
     private final Log logAgent;
     private final Advertencia advertenciaAgent;
 
-	public SistemaMonitoreo(Log logAgent, Advertencia advertenciaAgent) {
+	public ProductoService(Log logAgent, Advertencia advertenciaAgent) {
         this.logAgent = logAgent;
         this.advertenciaAgent = advertenciaAgent;
     }
@@ -32,7 +34,7 @@ public class SistemaMonitoreo {
         return false;
 	}
 
-	public boolean updateStock(String nombre, int nuevaCantidad) {
+	public void updateStock(String nombre, int nuevaCantidad) {
 		Producto producto = productos.get(nombre);
         if (producto == null) {
             throw new ProductoNotFoundException("Producto no encontrado.");
@@ -53,7 +55,7 @@ public class SistemaMonitoreo {
     }
 	
 	public static void main(String[] args) {
-		SpringApplication.run(SistemaMonitoreo.class, args);
+		SpringApplication.run(ProductoService.class, args);
 	}
 	
 }

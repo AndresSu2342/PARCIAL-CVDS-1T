@@ -1,0 +1,6 @@
+com\parcial\monitoreo\producto\Producto.class
+com\parcial\monitoreo\ProductoController.class
+com\parcial\monitoreo\log\Log.class
+com\parcial\monitoreo\ProductoService.class
+com\parcial\monitoreo\advertencia\Advertencia.class
+com\parcial\monitoreo\ProductoNotFoundException.class
