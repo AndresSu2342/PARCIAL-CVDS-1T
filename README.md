@@ -26,5 +26,7 @@ Se eligió el patrón Observer por las siguientes razones:
 
 Se manejo pruebas principalmente para la clase de ServiceProduct que es la principal, donde se abarca las demas clases, por eso mismo no se tomo en cuenta tener pruebas para clases comno: Advertencia o Log
 
+![Ejemplo Patron](/capturas/jacoco.png) 
 
+PD: No pude abarcar mas % por el tiempo profe, no sea malito:(
 
