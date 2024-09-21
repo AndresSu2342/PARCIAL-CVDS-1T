@@ -1,42 +1,42 @@
 package com.parcial.monitoreo.producto;
 
 public class Producto {
-    private String name;
-    private double price;
-    private int stock;
-    private String category;
+    private String nombre;
+    private double precio;
+    private int cantidad;
+    private String categoria;
 
     public Producto(String nombre, double precio, int cantidad, String categoria) {
-        this.name = nombre;
-        this.price = precio;
-        this.stock = cantidad;
-        this.category = categoria;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.categoria = categoria;
     }
 
-    public String getName(){
-        return name;
+    public String getNombre(){
+        return nombre;
     }
-    public String getPrice(){
-        return price;
+    public double getPrecio(){
+        return precio;
     }
-    public String getStock(){
-        return stock;
+    public int getCantidad(){
+        return cantidad;
     }
-    public String getCategory(){
-        return category;
+    public String getCategoria(){
+        return categoria;
     }
     
-    public void setName(String newName){
-        name = newName;
+    public void setNombre(String newNombre){
+        nombre = newNombre;
     }
-    public void setPrice(String newPrice){
-        price = newPrice;
+    public void setPrecio(double newPrecio){
+        precio = newPrecio;
     }
-    public void setStock(String newStock){
-        stock = newStock;
+    public void setCantidad(int newCantidad){
+        cantidad = newCantidad;
     }
-    public void setCategory(String newCategory){
-        category = newCategory;
+    public void setCategoria(String newCategoria){
+        categoria = newCategoria;
     }
 
 }

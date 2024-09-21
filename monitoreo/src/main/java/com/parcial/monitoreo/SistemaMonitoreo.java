@@ -32,7 +32,7 @@ public class SistemaMonitoreo {
         return false;
 	}
 
-	public boolean updateStock(Producto product, String newStock) {
+	public boolean updateStock(String nombre, int nuevaCantidad) {
 		Producto producto = productos.get(nombre);
         if (producto == null) {
             throw new ProductoNotFoundException("Producto no encontrado.");
@@ -43,6 +43,10 @@ public class SistemaMonitoreo {
             advertenciaAgent.notifyLowStock(producto);
         }
 	}
+
+	public Producto getProduct(String nombre) {
+        return productos.get(nombre);
+    }
 
     public Map<String, Producto> getAllProducts() {
         return productos;
